@@ -1,0 +1,13 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/4196b3bf-72af-4159-8ac6-f9cdb9e96edc/resourceGroups/ResourceGroup_Personal/providers/Microsoft.Web/sites/jerradneff",
+    "appService.deploySubpath": "bin/Release/netcoreapp3.1/publish",
+    "files.exclude":{
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "bin": true,
+        "obj": true
+    }
+}
