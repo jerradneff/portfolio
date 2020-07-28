@@ -1,0 +1,29 @@
+:root
+{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body
+{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+header {
+    background-color: red;
+}
+
+main {
+}
+
+footer {
+    background-color: blue;
+}
