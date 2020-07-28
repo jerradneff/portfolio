@@ -9,8 +9,8 @@ namespace portfolio.Models
         public SkillTypeEnum SkillType { get; set; }
         public string SkillTypeName
         {
-            // A friendly name, because we can't put spaces in enum names!
-            get => Enum.GetName(typeof(SkillTypeEnum), SkillType);
+            // A friendly name, because we can't put spaces and other characters in enum names!
+            get => ((DescriptionAttribute[])(SkillType.GetType().GetField(SkillType.ToString())).GetCustomAttributes(typeof(DescriptionAttribute), false))[0].Description;  
         }
         public float ExpertiseScore { get; set; }
         public int ExperienceYears { get; set; }
@@ -18,6 +18,7 @@ namespace portfolio.Models
 
     public enum SkillTypeEnum
     {
+        // Always include a description for compatibility.
         [Description("Development Fundamentals")]
         DevelopmentFundamentals,
         [Description("Database")]
