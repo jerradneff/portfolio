@@ -22,7 +22,14 @@
                 "${workspaceFolder}/portfolio.csproj",
                 "/p:Configuration=Release"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "dependsOn": [
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
